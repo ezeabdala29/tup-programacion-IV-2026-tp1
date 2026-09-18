@@ -1,0 +1,58 @@
+### Traer todos los datos de un rectangulo
+GET http://localhost:3000/rectangulos/10/5
+
+### Calcular solo el perimetro
+GET http://localhost:3000/rectangulos/10/5/perimetro
+
+### Calcular solo la superficie
+GET http://localhost:3000/rectangulos/10/5/superficie
+
+### Chequear si los lados forman un cuadrado
+GET http://localhost:3000/rectangulos/10/10/es-cuadrado
+
+### Chequear si los lados forman un cuadrado
+GET http://localhost:3000/rectangulos/10/5/es-cuadrado
+
+### Crear un rectangulo mandando los datos por el body
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+    "base": 10,
+    "altura": 5
+}
+
+### Crear un cuadrado por POST
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+    "base": 10,
+    "altura": 10
+}
+
+### Validacion: tirar error por intentar usar un numero negativo
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+    "base": -10,
+    "altura": 5
+}
+
+### Validacion: tirar error por intentar usar un cero
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+    "base": 0,
+    "altura": 5
+}
+
+### Validacion: tirar error por dato faltante 
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+    "base": 10
+}
