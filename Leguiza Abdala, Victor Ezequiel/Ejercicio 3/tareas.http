@@ -1,0 +1,54 @@
+### Listar todas las tareas
+GET http://localhost:3000/tareas
+
+
+### Crear tarea pendiente
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Configurar CachyOS",
+    "completada": false
+}
+
+
+### Crear tarea completada
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Instalar MongoDB",
+    "completada": true
+}
+
+
+### Listar tareas completadas
+GET http://localhost:3000/tareas/completadas
+
+
+### Listar tareas pendientes
+GET http://localhost:3000/tareas/pendientes
+
+
+### Provocar error por tarea duplicada
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Configurar CachyOS",
+    "completada": false
+}
+
+
+### Modificar estado de una tarea
+PUT http://localhost:3000/tareas/Configurar%20CachyOS
+Content-Type: application/json
+
+{
+    "nombre": "Configurar CachyOS",
+    "completada": true
+}
+
+
+### Eliminar una tarea
+DELETE http://localhost:3000/tareas/Instalar%20MongoDB
