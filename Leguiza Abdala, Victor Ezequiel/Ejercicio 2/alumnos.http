@@ -1,0 +1,85 @@
+@baseUrl = http://localhost:3000
+
+### 1. Axel de la Fuente - promocionado
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Axel de la Fuente",
+  "notas": [8, 9, 10]
+}
+
+### 2. Lucas Cortez - aprobado
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Lucas Cortez",
+  "notas": [6, 7, 6]
+}
+
+### 3. Federico Luna - reprobado
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Federico Luna",
+  "notas": [4, 5, 5]
+}
+
+### 4. Felipe Astuena - aprobado
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Felipe Astuena",
+  "notas": [7, 7, 6]
+}
+
+### 5. Uriel Rivero - promocionado
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Uriel Rivero",
+  "notas": [9, 8, 9]
+}
+
+### Crear con nombre duplicado 
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Axel de la Fuente",
+  "notas": [7, 7, 7]
+}
+
+### Crear con notas inválidas 
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Ignacio Vergara",
+  "notas": [11, 5, 5]
+}
+
+### Listar todos
+GET {{baseUrl}}/alumnos
+
+### Obtener uno por id
+GET {{baseUrl}}/alumnos/1
+
+### Obtener id inexistente 
+GET {{baseUrl}}/alumnos/999
+
+### Modificar alumno
+PUT {{baseUrl}}/alumnos/2
+Content-Type: application/json
+
+{
+  "nombre": "Lucas Cortez",
+  "notas": [8, 8, 9]
+}
+
+### Eliminar alumno
+DELETE {{baseUrl}}/alumnos/4

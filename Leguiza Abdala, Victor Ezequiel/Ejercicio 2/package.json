@@ -1,0 +1,16 @@
+{
+  "name": "ejercicio-2",
+  "version": "1.0.0",
+  "description": "API REST desarrollada con ExpressJS para la administración académica. Se utiliza un arreglo en memoria para almacenar unívocamente a los estudiantes y sus calificaciones.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
